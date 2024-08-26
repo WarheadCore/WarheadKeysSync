@@ -1,0 +1,12 @@
+## Interface: 70300
+## Version: 1.0
+## Title: |cFFFF0000Warhead:|r Ключи на аккаунте
+## Author: Winfidonarleyan
+## Notes: Возможность показать в чате свои ключи на всех своих персонажах
+## SavedVariables: WarheadKeysCacheDB
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+
+embeds.xml
+
+Core.lua

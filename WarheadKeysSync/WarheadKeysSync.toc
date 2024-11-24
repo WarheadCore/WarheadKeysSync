@@ -1,0 +1,38 @@
+## Interface: 70300
+## Version: 2.0
+## Title: |cFFFF0000Warhead:|r Keys Cache
+## Author: |cFFFF0000WarheadCore:|r Winfidonarleyan
+## Notes: Возможность показать в чате свои ключи на всех своих персонажах
+## SavedVariables: WHKS_DB
+
+libs\LibStub\LibStub.lua
+Libs\LibDialog-1.0\lib.xml
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceAddon-3.0\AceAddon-3.0.xml
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\AceTimer-3.0\AceTimer-3.0.xml
+libs\AceEvent-3.0\AceEvent-3.0.xml
+libs\AceConsole-3.0\AceConsole-3.0.xml
+libs\AceLocale-3.0\AceLocale-3.0.xml
+libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+libs\AceConfig-3.0\AceConfig-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+Libs\LibTextTable-1.1\Lib.xml
+Libs\lib-st\lib-st.xml
+Libs\lib-st\AceGUIWidget-lib-st.lua
+Libs\ChatThrottleLib\ChatThrottleLib.lua
+
+Core.lua
+DB.lua
+ChatHandler.lua
+Sync.lua
+Frame.lua
+TableAccount.lua
+TableParty.lua
+TableGuild.lua
+TableFriends.lua

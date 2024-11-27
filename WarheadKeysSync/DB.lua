@@ -338,6 +338,10 @@ function WarheadKeysSync:IsKeystonesSame(left, right)
         return false
     end
 
+    if left.InBag ~= right.InBag then
+        return false
+    end
+
     if left.Affix1 ~= right.Affix1 then
         return false
     end

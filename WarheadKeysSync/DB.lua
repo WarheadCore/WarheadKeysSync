@@ -285,6 +285,7 @@ function WarheadKeysSync:InitializeMapCache()
     table.insert(self.MapsCache, { KeystoneMapId = 239, InstanceId = 1753 }) -- Престол Триумвирата
     table.insert(self.MapsCache, { KeystoneMapId = 165, InstanceId = 1176 }) -- Некрополь Призрачной Луны
     table.insert(self.MapsCache, { KeystoneMapId = 166, InstanceId = 1208 }) -- Депо Мрачных Путей
+    table.insert(self.MapsCache, { KeystoneMapId = 168, InstanceId = 1279 }) -- Вечное Цветение
 end
 
 function WarheadKeysSync:GetKeystoneMap(instanceId)

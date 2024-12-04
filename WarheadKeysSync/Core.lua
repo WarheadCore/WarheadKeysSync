@@ -200,14 +200,36 @@ end
 function WarheadKeysSync:OnChallengeComplete()
     local mapChallengeModeID, level, time, _, keystoneUpgradeLevels = C_ChallengeMode.GetCompletionInfo()
     local keystoneMapId = self:GetKeystoneMap(mapChallengeModeID)
-    local dungeonName = C_ChallengeMode.GetMapInfo(keystoneMapId) or "Unk"
-    local timeString = GetTimeString(time / 1000)
-
-    self:PrintDebug("Complete challenge:")
-    self:PrintDebug("  Map: %s (%d/%d)", dungeonName, mapChallengeModeID, keystoneMapId)
-    self:PrintDebug("  Level: %d", level)
-    self:PrintDebug("  Time: %s (%d)", timeString, time)
-    self:PrintDebug("  UpgradeLevels: %d", keystoneUpgradeLevels)
 
     self:SaveBestRun(WarheadKeysSync.PlayerInfo.Name, select(3, UnitClass("player")), level, keystoneMapId, keystoneUpgradeLevels)
 end
+
+-- local TestDropdownMenuList = { "PLAYER", "RAID_PLAYER", "PARTY", "TARGET", "FRIEND" }
+
+-- local function menuButtonFunction(self)
+-- 	if self.value == "TEST_BUTTON_A" then
+-- 		-- add target to list function
+-- 		print("Target added to list")
+-- 		elseif self.value == "TEST_BUTTON_B" then
+-- 		-- remove tagerget from list
+-- 		print("Target removed from list")
+-- 	end
+-- end
+
+-- UnitPopupButtons["TEST_BUTTON_A"] = {
+-- 	text = "TEST_BUTTON_A1",
+-- 	dist = 0
+-- }
+
+-- UnitPopupButtons["TEST_BUTTON_B"] = {
+-- 	text = "TEST_BUTTON_B2",
+-- 	dist = 0
+-- }
+
+-- for k,v in pairs(TestDropdownMenuList) do
+-- 	table.insert(UnitPopupMenus[v], "TEST_BUTTON_A")
+-- 	table.insert(UnitPopupMenus[v], "TEST_BUTTON_B")
+-- 	--	table.insert(UnitPopupMenus[v], "SUBSECTION_SEPARATOR")
+-- end
+
+-- hooksecurefunc("UnitPopup_OnClick", menuButtonFunction)

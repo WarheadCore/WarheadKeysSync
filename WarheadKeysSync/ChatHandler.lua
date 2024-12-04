@@ -50,14 +50,6 @@ function WarheadKeysSync:OnAddonMessage(_, prefix, message, channel, sender)
     if args[1] == "1" then
         -- self:PrintDebug("Found send keys info message. Args count: %d. Message: %s", #args, message)
 
-        -- Add support old addons
-        if #args == 11 then
-            tinsert(args, 0)
-            tinsert(args, 0)
-            tinsert(args, 0)
-            tinsert(args, 0)
-        end
-
         if #args < self:SyncArgsCount() then
             self:PrintDebug("Receive incorrect send keystone message format. Args %d/%d", #args, self:SyncArgsCount())
             return

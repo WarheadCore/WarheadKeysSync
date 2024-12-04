@@ -266,8 +266,6 @@ function WarheadKeysSync:AddDataToTable(keystone, owner, bestRunLevel, bestRunMa
 		return self:CompareKeystones(ra[1], rb[1])
 	end)
 
-
-
 	self.ScrollTable:SortData()
 end
 

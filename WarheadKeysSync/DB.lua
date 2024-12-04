@@ -75,18 +75,21 @@ function WarheadKeysSync:SaveKeystone(keystone)
 end
 
 function WarheadKeysSync:SaveBestRun(playerName, playerClass, level, mapId, diff)
-    local tableRow = { PlayerName = playerName, PlayerClass = playerClass, Level = level, MapId = mapId, LevelDiff = diff, WeeklyIndex = self:GetWeeklyIndex() }
+    local currentWeeklyIndex = self:GetWeeklyIndex()
+    local tableRow = { PlayerName = playerName, PlayerClass = playerClass, Level = level, MapId = mapId, LevelDiff = diff, WeeklyIndex = currentWeeklyIndex }
 
     local oldBestRunIndex = self:GetBestRunIndex(playerName)
     if oldBestRunIndex then
         local oldBestRun = WHKS_DB.Runs[oldBestRunIndex]
 
-        if oldBestRun["Level"] > level then
-            return
-        end
+        if oldBestRun.WeeklyIndex == currentWeeklyIndex then
+            if oldBestRun["Level"] > level then
+                return
+            end
 
-        if oldBestRun["Level"] == level and oldBestRun["LevelDiff"] < diff then
-            return
+            if oldBestRun["Level"] == level and oldBestRun["LevelDiff"] < diff then
+                return
+            end
         end
 
         WHKS_DB.Runs[oldBestRunIndex] = tableRow
